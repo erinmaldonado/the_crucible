@@ -1,12 +1,32 @@
 # db_handler.py
 # connects to the database
 import argparse
+import os
+
+import shlex
+import subprocess
+
 
 def process_video(video_path):
     print(f"Processing video: {video_path}")
+    # from import_video class
+    file_path = os.path.join('/data', 'raw_data', video_path)
+    print(f"Processing...: {file_path}")
     # Optional: Use subprocess to run external commands
     # import subprocess
     # subprocess.run(["your_command_here", video_path])
+
+def use_subprocess_video():
+    command = 'ls -l '
+
+    process = subprocess.Popen(
+    shlex.split(command),
+    stdout=subprocess.PIPE,
+    stderr = subprocess.STDOUT, 
+)
+    
+for line in iter(process.stdout.readline, ""):
+    pass
 
 def main():
     parser = argparse.ArgumentParser(description="Process a specified video file.")
