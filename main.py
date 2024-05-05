@@ -20,7 +20,5 @@ def main():
     else:
         print("Processing other video file:", args.process)
         
-    if args.
-
 if __name__ == "__main__":
     main()

@@ -1,0 +1,5 @@
+## process
+python3 main.py --process twitch_nft_demo.mp4
+
+## file
+python3 main.py --file baselight.txt
